@@ -31,9 +31,10 @@ export interface StockMonthRevenueData {
   revenue: number; // 月营收
   revenue_month: number; // 月营收月份
   revenue_year: number; // 月营收年份
+  [key: string]: string | number | undefined;
 }
 
 export interface StockMonthRevenueWithGrowthRate
   extends StockMonthRevenueData {
-  growthRate?: number; // 月营收增长率
+  growthRate: number; // 月营收增长率
 }

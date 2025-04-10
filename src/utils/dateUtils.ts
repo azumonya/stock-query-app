@@ -16,7 +16,7 @@ export const dateUtils = {
   // 根据时间范围获取起始日期
   getStartDate(
     range: TimeRange,
-    endDate: string = dayjs().format("YYYY-MM-DD")
+    endDate: string = dayjs().startOf('month').format("YYYY-MM-DD")
   ): string {
     const end = dayjs(endDate);
 
@@ -36,7 +36,7 @@ export const dateUtils = {
 
   // 根据时间范围获取日期范围
   getDateRange(range: TimeRange): DateRange {
-    const endDate = dayjs().format("YYYY-MM-DD");
+    const endDate = dayjs().startOf('month').format("YYYY-MM-DD");
     const startDate = this.getStartDate(range, endDate);
     return {
       startDate,

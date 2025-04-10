@@ -28,11 +28,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
         <StockProvider>
           <NavBar />
-          {children}
+          <main className="min-h-[calc(100vh-4rem)]">
+            {children}
+          </main>
         </StockProvider>
       </body>
     </html>
