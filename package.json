@@ -14,8 +14,6 @@
     "@mui/icons-material": "^7.0.2",
     "@mui/material": "^7.0.2",
     "@mui/x-charts": "^7.28.0",
-    "@mui/x-data-grid": "^7.28.3",
-    "@tanstack/react-table": "^8.21.2",
     "dayjs": "^1.11.13",
     "next": "14.2.28",
     "react": "^18",
