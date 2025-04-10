@@ -37,4 +37,5 @@ export interface StockMonthRevenueData {
 export interface StockMonthRevenueWithGrowthRate
   extends StockMonthRevenueData {
   growthRate: number; // 月营收增长率
+  revenueDate: string; // 月营收日期
 }

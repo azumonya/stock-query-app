@@ -78,6 +78,9 @@ export default function StockDetail() {
             return {
               ...currentData,
               revenue: currentData.revenue / 1000,
+              revenueDate: `${
+                currentData.revenue_year
+              }-${currentData.revenue_month.toString().padStart(2, "0")}`,
               growthRate: lastYearData?.revenue
                 ? Number(
                     (

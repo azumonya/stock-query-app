@@ -33,10 +33,10 @@ export default function StockChart({
         xAxis={[
           {
             scaleType: "band",
-            dataKey: "date",
-            id: "date",
+            dataKey: "revenueDate",
+            id: "revenueDate",
             tickLabelInterval: (value) => {
-              const date = dayjs(value, "YYYYMM");
+              const date = dayjs(value, "YYYY-MM");
               const month = date.format("MM");
               return month === "01";
             },
@@ -44,7 +44,7 @@ export default function StockChart({
               if (context.location === "tooltip") {
                 return value;
               }
-              const date = dayjs(value, "YYYYMM");
+              const date = dayjs(value, "YYYY-MM");
               const year = date.format("YYYY");
               return year;
             },
@@ -111,7 +111,11 @@ export default function StockChart({
             />
           </>
         )}
-        <ChartsXAxis position="bottom" axisId="date" disableTicks={true} />
+        <ChartsXAxis
+          position="bottom"
+          axisId="revenueDate"
+          disableTicks={true}
+        />
         <ChartsYAxis position="left" axisId="revenue" disableTicks={true} />
         <ChartsYAxis position="right" axisId="growthRate" disableTicks={true} />
       </ResponsiveChartContainer>
