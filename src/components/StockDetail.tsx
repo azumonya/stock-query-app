@@ -132,7 +132,7 @@ export default function StockDetail() {
       );
     }
     return (
-      <div className="bg-white p-4 shadow-md border">
+      <div className="bg-white p-4 shadow-sm border">
         <div className="flex items-center gap-3 text-xl">
           <h1 className="font-bold text-gray-900">
             {stockInfoData.stock_name}
@@ -145,7 +145,7 @@ export default function StockDetail() {
 
   const StockChartContiner = () => {
     return (
-      <div className="bg-white shadow-md border">
+      <div className="bg-white shadow-sm border">
         <div className="p-4 pb-0 flex justify-between">
           <div className="inline-block">
             <p className="bg-blue-500 text-white px-4 py-2 rounded-sm text-sm">
@@ -174,7 +174,7 @@ export default function StockDetail() {
   const StockHistoryList = () => {
     return (
       <>
-        <div className="bg-white shadow-md py-6 border">
+        <div className="bg-white shadow-sm py-4 border">
           <div className="pl-4 pb-4 inline-block">
             <p className="bg-blue-500 text-white px-4 py-2 rounded-sm text-sm">
               详细数据
@@ -191,7 +191,7 @@ export default function StockDetail() {
   };
 
   return (
-    <div className="container mx-auto max-w-2xl px-4 py-6 space-y-6">
+    <div className="container mx-auto max-w-2xl px-4 py-2 space-y-2">
       <StockInfo />
       <StockChartContiner />
       <StockHistoryList />
